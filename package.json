@@ -1,0 +1,24 @@
+{
+  "name": "final-project-new-server-and-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidcbalsley/final-project-new-server-and-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidcbalsley/final-project-new-server-and-React/issues"
+  },
+  "homepage": "https://github.com/davidcbalsley/final-project-new-server-and-React#readme"
+}
