@@ -6,6 +6,7 @@
 // =============================================================
 var express = require("express");
 var db = require("./models");
+const routes = require("./routes");
 
 // Sets up the Express App
 // =============================================================
@@ -29,7 +30,9 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+// Add routes, both API and view
+app.use(routes);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
