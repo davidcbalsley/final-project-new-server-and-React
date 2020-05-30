@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {/*}
+          <Route exact path="/ClientCreateLogin" component={ClientCreateLogin} />
+          <Route exact path="/ClientEnterPersonalInfo" component={ClientEnterPersonalInfo} />
+          <Route exact path="/ClientCreateNameAndAddress" component={ClientCreateNameAndAddress} />
+          <Route exact path="/ClientEnterNumPeopleByAge" component={ClientEnterNumPeopleByAge} />
+          <Route exact path="/ClientCreateLicensePlates" component={ClientCreateLicensePlates} />
+          <Route exact path="/ClientConfirmation" component={ClientConfirmation} />
+          <Route exact path="/WorkerEnterLicensePlate" component={WorkerEnterLicensePlate} />
+          <Route exact path="/WorkerViewClientInfo" component={WorkerViewClientInfo} />
+          <Route exact path="/WorkerConfirmation" component={WorkerConfirmation} />
+  */}
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
