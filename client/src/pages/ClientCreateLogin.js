@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import { useHistory } from "react-router-dom";
 import Pagetitle from "../components/Pagetitle";
 import StackedFormWrapper from "../components/StackedFormWrapper";
+import API from "../utils/API";
 
 function ClientCreateLogin() {
     const [username, setUsername] = useState();
@@ -16,7 +17,24 @@ function ClientCreateLogin() {
         console.log("username is " + username);
         console.log("password is " + password);
 
-        // Add check that user has entered values for username and password -- see 19.3.18
+        // Check that user entered username and password
+        if (!username || !password) {
+            alert("Please enter a username and password.")  // Future development -- alert more nicely
+        } else {
+            API.postLoginCredentials({
+                email: username,
+                password: password,
+                userType: "V"
+            })
+            .then(res => {
+                // For now, want to see id of newly created user
+                console.log(res);
+
+                // Re-direct to page where client can enter name, address, and other info
+                history.push("/ClientEnterPersonalInfo");
+            })
+            .catch(err => console.log(err));
+        }
     
         // David! At this point, make call to api to create login credentials with username and password
         // If successful, navigate to page where we collect user's info
