@@ -14,14 +14,12 @@ function ClientCreateLogin() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("username is " + username);
-        console.log("password is " + password);
-
+        
         // Check that user entered username and password
         if (!username || !password) {
             alert("Please enter a username and password.")  // Future development -- alert more nicely
         } else {
-            API.postLoginCredentials({
+            API.createLoginCredentials({
                 email: username,
                 password: password,
                 userType: "V"
@@ -35,16 +33,6 @@ function ClientCreateLogin() {
             })
             .catch(err => console.log(err));
         }
-    
-        // David! At this point, make call to api to create login credentials with username and password
-        // If successful, navigate to page where we collect user's info
-        /*
-        API.createLogin(username, password)
-          .then()
-          .catch()
-        */
-        history.push("/ClientEnterPersonalInfo");
-    
       };
 
     return (
