@@ -4,7 +4,10 @@ export default {
     postCatName: function(query) {
         return axios.post("/api/catnames", query);
     },
-    postLoginCredentials: function(query) {
+    createLoginCredentials: function(query) {
         return axios.post("/api/users/signup", query);
+    },
+    verifyLoginCredentials: function(query) {
+        return axios.post("/api/users/login", query);
     }
 }
