@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const catNamesRoutes = require("./catnames");
+const catNamesRoutes = require("./catnamesx");
 
 // CatNames routes
 router.use("/catnames", catNamesRoutes);
