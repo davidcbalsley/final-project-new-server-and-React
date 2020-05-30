@@ -19,6 +19,10 @@ function ClientCreateLogin() {
         if (!username || !password) {
             alert("Please enter a username and password.")  // Future development -- alert more nicely
         } else {
+            // Remove any extraneous spaces from end of email and password
+            username.trim();
+            password.trim();
+
             API.createLoginCredentials({
                 email: username,
                 password: password,
