@@ -7,10 +7,10 @@ import StackedFormWrapper from "../components/StackedFormWrapper";
 function ClientEnterPersonalInfo() {
 
     const [developerState, setDeveloperState] = useState({
-        firstname: "",
-        lastname: "",
-        streetaddress: "",
-        aptnumber: "",
+        firstName: "",
+        lastName: "",
+        streetAddress: "",
+        aptNumber: "",
         city: "",
         state: "",
         zip: "",
