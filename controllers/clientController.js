@@ -4,6 +4,7 @@ const db = require("../models");
 module.exports = {
     create: function(req, res) {
         db.Client.create({
+            userId: req.body.userId,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             streetAddress: req.body.streetAddress,

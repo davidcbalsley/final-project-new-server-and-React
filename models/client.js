@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
     var Client = sequelize.define("Client", {
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+
         firstName: {
             type: DataTypes.STRING,
             allowNull: false
@@ -16,8 +21,7 @@ module.exports = function(sequelize, DataTypes) {
         },
 
         aptNumber: {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.STRING
         },
  
         city: {

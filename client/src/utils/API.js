@@ -9,5 +9,8 @@ export default {
     },
     verifyLoginCredentials: function(query) {
         return axios.post("/api/users/login", query);
+    },
+    createClient: function(query) {
+        return axios.post("/api/clients", query);
     }
 }

@@ -29,11 +29,12 @@ function ClientCreateLogin() {
                 userType: "V"
             })
             .then(res => {
-                // For now, want to see id of newly created user
-                console.log(res);
-
                 // Re-direct to page where client can enter name, address, and other info
-                history.push("/ClientEnterPersonalInfo");
+                // Pass along login id, so that we can add it to client record when we create one
+                history.push({
+                    pathname: "/ClientEnterPersonalInfo",
+                    data: res.data
+                });
             })
             .catch(err => console.log(err));
         }
