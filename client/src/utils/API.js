@@ -12,5 +12,8 @@ export default {
     },
     createClient: function(query) {
         return axios.post("/api/clients", query);
+    },
+    getClient: function(id) {
+        return axios.get("/api/clients/" + id);
     }
 }

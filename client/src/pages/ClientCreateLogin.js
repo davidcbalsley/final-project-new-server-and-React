@@ -47,11 +47,11 @@ function ClientCreateLogin() {
 
             <StackedFormWrapper onSubmit={handleSubmit}>
                 <fieldset>
-                    <label for="new-username">Username</label>
+                    <label for="new-email">E-mail address</label>
                     <input 
                         type="text" 
-                        id="new-username"
-                        placeholder="username"
+                        id="new-e-mail"
+                        placeholder="e-mail address"
                         onChange={event => setUsername(event.target.value)} 
                     />
                     <label for="new-password">Password</label>

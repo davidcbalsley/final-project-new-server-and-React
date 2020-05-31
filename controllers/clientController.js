@@ -24,5 +24,10 @@ module.exports = {
     },
     verifyLoginCredentials: function(req, res) {
         res.json(req.user);
+    },
+    findById: function(req, res) {
+        db.Client.findOne({where: { id: req.params.id }})
+        .then(dbClient => res.json(dbClient))
+        .catch(err => res.status(422).json(err));
     }
 }
