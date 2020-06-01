@@ -31,6 +31,9 @@ function ClientEnterPersonalInfo(props) {
         const { data } = props.location;
         
         // Future development -- add check that user has entered values for all fields
+
+        // Before committing license plate number, remove the spaces
+        developerState.license = developerState.license.split(" ").join("");
     
         // Create client
         API.createClient({
