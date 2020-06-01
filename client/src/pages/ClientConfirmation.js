@@ -19,7 +19,9 @@ function ClientConfirmation(props) {
             .catch(err => console.log(err));
     }, []);
 
-    return(
+    return (
+        <div>
+        { client ? (
         <div>
             {/* Page title */}
             <Pagetitle>Thank you!<br />You are now registered!</Pagetitle>
@@ -30,18 +32,18 @@ function ClientConfirmation(props) {
                     <h5>Name</h5>
                     <p>{client.firstName + " " + client.lastName}</p>
                 </div>
-                {/*}
+                {/*
                 <div className="pure-u-1-5">
                     <button className="pure-button">Edit</button>
                 </div>
                 */}
             </div>
-
+        
             {/* Address */}
             <div className="pure-g">
                 <div className="pure-u-4-5">
                     <h5>Address</h5>
-                    <p>123 Main St<br />Anytown, IL 12345</p>
+                    <p>{client.streetAddress}<br />{client.city}, {client.state} {client.zip}</p>
                 </div>
                 {/*
                 <div className="pure-u-1-5">
@@ -54,7 +56,13 @@ function ClientConfirmation(props) {
             <div className="pure-g">
                 <div className="pure-u-4-5">
                     <h5>Number of people in your household</h5>
-                    <p>1 adult<br />2 children<br />1 senior</p>
+                    <p>
+                        {client.numAdults} {client.numAdults > 1 ? (<span>adults</span>) : (<span>adult</span>)}
+                        <br />
+                        {client.numChildren} {client.numChildren > 1 ? (<span>children</span>) : (<span>child</span>)}
+                        <br />
+                        {client.numSeniors} {client.numSeniors > 1 ? (<span>seniors</span>) : (<span>senior</span>)}
+                    </p>
                 </div>
                 {/*
                 <div className="pure-u-1-5">
@@ -67,7 +75,7 @@ function ClientConfirmation(props) {
             <div className="pure-g">
                 <div className="pure-u-4-5">
                     <h5>License plate numbers</h5>
-                    <h5>A12 B34</h5>
+                    <p>{client.license}</p>
                 </div>
                 {/*
                 <div className="pure-u-1-5">
@@ -94,7 +102,10 @@ function ClientConfirmation(props) {
             <Button>
                 Edit
             </Button>
-
+        </div>
+        ) : (
+            <h3>No results to display</h3>
+        )}
         </div>
     );
 }
