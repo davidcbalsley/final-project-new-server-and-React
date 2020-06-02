@@ -9,8 +9,12 @@ router.route("/")
 router.route("/:id")
   .get(clientController.findById);
 
-// Matched with "/api/clients/userid/:id"
+// Matches with "/api/clients/userid/:id"
 router.route("/userid/:id")
   .get(clientController.findByUserId);
+
+// Matches with "/api/clients/plate"
+router.route("/plate/platestate=:platestate&license=:license")
+  .get(clientController.findByLicensePlate);
 
 module.exports = router;

@@ -53,12 +53,6 @@ function ClientEnterPersonalInfo(props) {
         })
         .then(res => {
             // Re-direct to page that shows summary of client info and offers chance to edit
-
-            // Debug 
-            // Before we send id to next page, make sure this works
-            // console.log("res.data.id = " + res.data.id);
-            // This is correct!
-
             history.push({
                 pathname: "/ClientViewAndEditPersonalInfo",
                 data: res.data.id

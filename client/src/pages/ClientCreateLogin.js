@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
 import { useHistory } from "react-router-dom";
+import Button from "../components/Button";
 import Pagetitle from "../components/Pagetitle";
 import StackedFormWrapper from "../components/StackedFormWrapper";
 import API from "../utils/API";
@@ -26,7 +26,7 @@ function ClientCreateLogin() {
             API.createLoginCredentials({
                 email: username,
                 password: password,
-                userType: "W"
+                userType: "C"
             })
             .then(res => {
                 // Re-direct to page where client can enter name, address, and other info

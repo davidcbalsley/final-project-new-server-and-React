@@ -34,5 +34,10 @@ module.exports = {
         db.Client.findOne({ where: { userId: req.params.id }})
         .then(dbClient => res.json(dbClient))
         .catch(err => res.status(422).json(err));
+    },
+    findByLicensePlate: function(req, res) {
+        db.Client.findOne({ where: { plateState: req.params.platestate, license: req.params.license }})
+        .then(dbClient => res.json(dbClient))
+        .catch(err => res.status(422).json(err));
     }
 }

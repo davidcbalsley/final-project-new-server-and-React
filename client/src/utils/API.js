@@ -18,5 +18,8 @@ export default {
     },
     findClientByUserId: function(id) {
         return axios.get("/api/clients/userid/" + id);
+    },
+    findClientByLicensePlate: function(query) {
+        return axios.get("/api/clients/plate/platestate=" + query.plateState + "&license=" + query.license);
     }
 }
