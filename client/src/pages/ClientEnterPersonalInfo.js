@@ -75,27 +75,27 @@ function ClientEnterPersonalInfo(props) {
             <StackedFormWrapper onSubmit={handleSubmit}>
                 <fieldset>
                     {/* First name */}
-                    <label for="new-first-name">First name</label>
+                    <label htmlFor="new-first-name">First name</label>
                     <input type="text" id="new-first-name" onChange={event => setDeveloperState({ ...developerState, firstName: event.target.value})} />
 
                     {/* Last name */}
-                    <label for="new-last-name">Last name</label>
+                    <label htmlFor="new-last-name">Last name</label>
                     <input type="text" id="new-last-name" onChange={event => setDeveloperState({ ...developerState, lastName: event.target.value})} />
 
                     {/* Street address */}
-                    <label for="new-street-address">Street address</label>
+                    <label htmlFor="new-street-address">Street address</label>
                     <input type="text" id="new-street-address" onChange={event => setDeveloperState({ ...developerState, streetAddress: event.target.value})} />
 
                     {/* Apartment number */}
-                    <label for="new-apartment-number">Apartment number</label>
+                    <label htmlFor="new-apartment-number">Apartment number</label>
                     <input type="text" id="new-apartment-number" onChange={event => setDeveloperState({ ...developerState, aptNumber: event.target.value})}/>
 
                     {/* City */}
-                    <label for="new-city">City</label>
+                    <label htmlFor="new-city">City</label>
                     <input type="text" id="new-city" onChange={event => setDeveloperState({ ...developerState, city: event.target.value})}/>
 
                     {/* State */}
-                    <label for="new-state">State</label>
+                    <label htmlFor="new-state">State</label>
                     <select name="residence-state" id="new-state" onChange={event => setDeveloperState({ ...developerState, state: event.target.value})}>
                         <option value="IL">IL</option>
                         <option value="IN">IN</option>
@@ -103,7 +103,7 @@ function ClientEnterPersonalInfo(props) {
                     </select>
 
                     {/* Zip code */}
-                    <label for="new-zip">Zip code</label>
+                    <label htmlFor="new-zip">Zip code</label>
                     <input type="text" id="new-zip" onChange={event => setDeveloperState({ ...developerState, zip: event.target.value})}/>
 
                     {/* Number adults */}
@@ -115,11 +115,11 @@ function ClientEnterPersonalInfo(props) {
                     <input type="text" id="num-children" onChange={event => setDeveloperState({ ...developerState, numChildren: event.target.value})}/>
 
                     {/* Number seniors */}
-                    <label for="num-seniors">Number of Seniors (65 or older)</label>
+                    <label htmlFor="num-seniors">Number of Seniors (65 or older)</label>
                     <input type="text" id="num-seniors" onChange={event => setDeveloperState({ ...developerState, numSeniors: event.target.value})}/>
 
                     {/* State */}
-                    <label for="new-plate-state">License Plate State</label>
+                    <label htmlFor="new-plate-state">License Plate State</label>
                     <select name="plate-state" id="new-plate-state" onChange={event => setDeveloperState({ ...developerState, plateState: event.target.value})}>
                         <option value="IL">IL</option>
                         <option value="IN">IN</option>
@@ -127,7 +127,7 @@ function ClientEnterPersonalInfo(props) {
                     </select>
 
                     {/* License plate number */}
-                    <label for="new-plate-number">License Plate Number</label>
+                    <label htmlFor="new-plate-number">License Plate Number</label>
                     <input type="text" id="new-plate-number" onChange={event => setDeveloperState({ ...developerState, license: event.target.value})}/>
 
                     <Button>
