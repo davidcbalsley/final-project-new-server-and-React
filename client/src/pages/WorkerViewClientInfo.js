@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import Button from "../components/Button";
 import Pagetitle from "../components/Pagetitle";
 import API from "../utils/API";
@@ -15,28 +16,16 @@ function WorkerViewClientInfo(props) {
             .catch(err => console.log(err));
     }, []);
 
+    // Use this to redirect user to new pages
+    let history = useHistory();
+
     const handleSignForClientBtn = e => {
 
-        // Nothing yet
+        // Future development -- 
+        // Add visit to PantryVisits
 
-        // Debug
-        // console.log("Pressed sign for client button");
-
-        /*
-        // Look up the license plate number in the Clients table
-        API.findClientByLicensePlate({
-            plateState: developerState.plateState,
-            license: developerState.license
-        })
-        .then(res => {
-            history.push({
-                pathname: "/WorkerViewClientInfo",
-                data: res.data.id
-            });
-        })
-        .catch(err => console.log(err));
-        */
-    
+        // Re-direct to WorkerConfirmation page
+        history.push("/WorkerConfirmation");
     }
 
     return (
