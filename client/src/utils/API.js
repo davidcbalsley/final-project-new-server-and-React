@@ -15,5 +15,8 @@ export default {
     },
     getClient: function(id) {
         return axios.get("/api/clients/" + id);
+    },
+    findClientByUserId: function(id) {
+        return axios.get("/api/clients/userid/" + id);
     }
 }

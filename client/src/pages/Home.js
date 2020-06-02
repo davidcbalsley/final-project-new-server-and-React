@@ -26,11 +26,25 @@ function Home() {
         password: password
       })
       .then(res => {
-        // For now, want to see id of newly created user
-        console.log(res);
 
-        // Re-direct to page where client can view and edit personal information
-        history.push("/ClientConfirmation");
+        // Re-direct user to either client or worker page, based on user type
+        if (res.data.userType === "C") {
+          // The user is a client
+
+          // Get client's id
+          API.findClientByUserId(res.data.id)
+          .then(res => {
+            history.push({
+              pathname: "/ClientViewAndEditPersonalInfo",
+              data: res.data.id
+            });
+          })
+        }
+        else if (res.data.userType === "W") {
+          // The user is a worker/volunteer
+
+          history.push("/WorkerEnterLicensePlate");
+        }
       })
       .catch(err => console.log(err));
     }
@@ -60,13 +74,13 @@ function Home() {
           <StackedFormWrapper onSubmit={handleSubmit}>
             <fieldset>
               <legend>Log In</legend>
-              <label for="username">Username</label>
+              <label htmlFor="username">Username</label>
               <input 
                 type="text" 
                 id="username" 
                 placeholder="username"
                 onChange={event => setUsername(event.target.value)} />
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
               <input 
                 type="password" 
                 id="password" 

@@ -29,5 +29,10 @@ module.exports = {
         db.Client.findOne({where: { id: req.params.id }})
         .then(dbClient => res.json(dbClient))
         .catch(err => res.status(422).json(err));
+    },
+    findByUserId: function(req, res) {
+        db.Client.findOne({ where: { userId: req.params.id }})
+        .then(dbClient => res.json(dbClient))
+        .catch(err => res.status(422).json(err));
     }
 }
