@@ -8,11 +8,7 @@ function ClientViewAndEditPersonalInfo(props) {
 
     // When the page mounts, 
     useEffect(() => {
-        // Debug
-        // As test, make sure that this page received client ID from personal page
         const { data } = props.location;
-        // console.log("data.id = " + data.id);
-        // console.log("data = " + data); // data is equal to index number
 
         API.getClient(data)
             .then(res => setClient(res.data))
