@@ -19,6 +19,9 @@ function WorkerViewClientInfo(props) {
 
         // Nothing yet
 
+        // Debug
+        // console.log("Pressed sign for client button");
+
         /*
         // Look up the license plate number in the Clients table
         API.findClientByLicensePlate({
