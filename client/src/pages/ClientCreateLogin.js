@@ -26,7 +26,7 @@ function ClientCreateLogin() {
             API.createLoginCredentials({
                 email: username,
                 password: password,
-                userType: "C"
+                userType: "W"
             })
             .then(res => {
                 // Re-direct to page where client can enter name, address, and other info
