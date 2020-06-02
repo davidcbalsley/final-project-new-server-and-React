@@ -60,7 +60,7 @@ function ClientEnterPersonalInfo(props) {
             // This is correct!
 
             history.push({
-                pathname: "/ClientConfirmation",
+                pathname: "/ClientViewAndEditPersonalInfo",
                 data: res.data.id
             });
         })
