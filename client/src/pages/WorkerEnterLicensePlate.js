@@ -30,7 +30,7 @@ function WorkerEnterLicensePlate() {
             })
             .then(res => {
                 history.push({
-                    pathname: "/ClientViewAndEditPersonalInfo",
+                    pathname: "/WorkerViewClientInfo",
                     data: res.data.id
                 });
             })
