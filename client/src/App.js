@@ -5,6 +5,8 @@ import ClientCreateLogin from "./pages/ClientCreateLogin";
 import ClientEnterPersonalInfo from "./pages/ClientEnterPersonalInfo";
 import ClientViewAndEditPersonalInfo from "./pages/ClientViewAndEditPersonalInfo";
 import WorkerEnterLicensePlate from "./pages/WorkerEnterLicensePlate";
+import WorkerViewClientInfo from "./pages/WorkerViewClientInfo";
+import WorkerConfirmation from "./pages/WorkerConfirmation";
 
 function App() {
   return (
@@ -16,10 +18,8 @@ function App() {
           <Route exact path="/ClientEnterPersonalInfo" component={ClientEnterPersonalInfo} />
           <Route exact path="/ClientViewAndEditPersonalInfo" component={ClientViewAndEditPersonalInfo} />
           <Route exact path="/WorkerEnterLicensePlate" component={WorkerEnterLicensePlate} />
-          {/*}
           <Route exact path="/WorkerViewClientInfo" component={WorkerViewClientInfo} />
           <Route exact path="/WorkerConfirmation" component={WorkerConfirmation} />
-          */}
         </Switch>
       </div>
     </Router>
