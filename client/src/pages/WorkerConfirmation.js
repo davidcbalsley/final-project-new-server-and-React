@@ -1,12 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../components/Button";
+import Pagetitle from "../components/Pagetitle";
 
 function WorkerConfirmation() {
     return(
         <div>
             {/* Page title */}
-            <h4 className="content-head" style={{ textAlign: "center" }}>Confirmed!</h4>
+            <Pagetitle>Confirmed!</Pagetitle>
 
-            <button type="submit" className="pure-button pure-button-primary">Enter another license plate number</button>
+            <Link to="/WorkerEnterLicensePlate">
+                <Button>
+                    Enter another license plate number
+                </Button>
+            </Link>
         </div>
     );
 }
