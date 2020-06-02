@@ -80,10 +80,6 @@ function Home() {
         </GridHalfScreen>
 
       </GridWrapper>
-
-      {/* Link to donate to food pantries */}
-      <a href="/" _target="_blank" style={{ display: "block", textAlign: "center" }}>Donate to your local food bank</a>
-
     </div>);
   }
 
