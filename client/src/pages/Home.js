@@ -30,7 +30,7 @@ function Home() {
         console.log(res);
 
         // Re-direct to page where client can view and edit personal information
-        history.push("/ClientViewAndEditPersonalInfo");
+        history.push("/ClientConfirmation");
       })
       .catch(err => console.log(err));
     }
@@ -73,7 +73,7 @@ function Home() {
                 placeholder="password"
                 onChange={event => setPassword(event.target.value)}/>
               <Button>
-                Sign in
+                Sign In
               </Button>
             </fieldset>
           </StackedFormWrapper>
